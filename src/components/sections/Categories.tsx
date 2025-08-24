@@ -1,9 +1,9 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, type ComponentType } from "react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Code, Palette, PenTool, TrendingUp, Video, Settings, BarChart, Shield } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 
-const iconMap: Record<string, any> = {
+const iconMap: Record<string, ComponentType> = {
   Code,
   Palette,
   PenTool,
