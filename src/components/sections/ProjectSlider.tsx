@@ -86,7 +86,11 @@ const ProjectSlider = () => {
     return date.toLocaleDateString("hr-HR");
   };
 
-  const getClientName = (profile: any) => {
+  const getClientName = (profile: {
+    company_name?: string;
+    first_name?: string;
+    last_name?: string;
+  }) => {
     if (profile.company_name) return profile.company_name;
     if (profile.first_name && profile.last_name) {
       return `${profile.first_name} ${profile.last_name}`;
